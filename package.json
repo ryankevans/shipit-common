@@ -1,0 +1,24 @@
+{
+  "name": "shipit-common",
+  "version": "0.0.1",
+  "description": "Common tools and defaults for shipit-deploy.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryankevans/shipit-common.git"
+  },
+  "author": "Ryan K. Evans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryankevans/shipit-common/issues"
+  },
+  "homepage": "https://github.com/ryankevans/shipit-common#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "coffee-script": "^1.10.0",
+    "lodash": "^4.17.4",
+    "shipit-utils": "^1.3.1"
+  }
+}
