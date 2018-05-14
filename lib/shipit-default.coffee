@@ -14,7 +14,12 @@ module.exports = (shipit) ->
     DEFAULT = {
       default:
         workspace: path.join(os.tmpdir(), 'shipit', shipitfileDir)
-        keepReleases: Number.MAX_SAFE_INTEGER
+
+        # no longer using the following setting to keep all releases ...
+        # server HDDs were filling up after a short while. node.js
+        # deployments tend to be a couple hundred MB due to node_modules, the
+        # default for keepReleases is 5 and that's probably reasonable after all
+        # keepReleases: Number.MAX_SAFE_INTEGER
     }
 
     newConfig = _.defaultsDeep({}, config, DEFAULT)
