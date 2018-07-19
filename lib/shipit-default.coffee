@@ -13,14 +13,11 @@ module.exports = (shipit) ->
 
     DEFAULT = {
       default:
+        branch: 'master'
         workspace: path.join(os.tmpdir(), 'shipit', shipitfileDir)
-
-        # no longer using the following setting to keep all releases ...
-        # server HDDs were filling up after a short while. node.js
-        # deployments tend to be a couple hundred MB due to node_modules, the
-        # default for keepReleases is 5 and that's probably reasonable after all
-        # keepReleases: Number.MAX_SAFE_INTEGER
-    }
+        ignores: [ '.DS_Store', '.git', 'node_modules', 'bower_components' ]
+        deleteOnRollback: false
+        keepReleases: 5    }
 
     newConfig = _.defaultsDeep({}, config, DEFAULT)
 
