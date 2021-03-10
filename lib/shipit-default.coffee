@@ -17,7 +17,8 @@ module.exports = (shipit) ->
         workspace: path.join(os.tmpdir(), 'shipit', shipitfileDir)
         ignores: [ '.DS_Store', '.git', 'node_modules', 'bower_components' ]
         deleteOnRollback: false
-        keepReleases: 5    }
+        keepReleases: 5
+    }
 
     newConfig = _.defaultsDeep({}, config, DEFAULT)
 
